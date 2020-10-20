@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SliderCell" customModule="PizzaWorld" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="441" height="441"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="441" height="441"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ePE-g8-FWz">
+                        <rect key="frame" x="43" y="15" width="355" height="411"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                <point key="value" x="0.0" y="9"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="14"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizzaimage" translatesAutoresizingMaskIntoConstraints="NO" id="p1n-mY-iOy">
+                        <rect key="frame" x="23" y="5" width="395" height="431"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                <point key="value" x="0.0" y="9"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.23999999999999999"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="14"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbT-9A-dUS">
+                        <rect key="frame" x="35" y="328" width="371" height="85"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="dqu-I6-5wn">
+                                <rect key="frame" x="284.5" y="0.0" width="92.5" height="85"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="ORDER NOW">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9hO-2S-TCg">
+                                <rect key="frame" x="10" y="10" width="264.5" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seafood Pesto" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMw-Ny-auI">
+                                        <rect key="frame" x="0.0" y="0.0" width="264.5" height="14"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ts-rB-arK" customClass="RatingView" customModule="PizzaWorld">
+                                        <rect key="frame" x="0.0" y="22" width="264.5" height="20"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Yfb-JJ-Zky"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="2sD-6z-2da">
+                                        <rect key="frame" x="0.0" y="50" width="264.5" height="15"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vAy-QS-ual" userLabel="Pizza Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="170" height="15"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dish" translatesAutoresizingMaskIntoConstraints="NO" id="Y7c-dN-B2j">
+                                                        <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="15" id="BZV-m3-Hdf"/>
+                                                            <constraint firstAttribute="width" constant="15" id="NXz-3H-fT6"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPg-vf-zMg">
+                                                        <rect key="frame" x="23" y="0.0" width="147" height="15"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="svX-dM-VFZ" userLabel="Time Stack View">
+                                                <rect key="frame" x="202" y="0.0" width="62.5" height="15"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alarmClock" translatesAutoresizingMaskIntoConstraints="NO" id="xpQ-eq-NiJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="15" id="0Fv-Ys-H8G"/>
+                                                            <constraint firstAttribute="width" constant="15" id="jPh-mi-Cr2"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6z-6b-g0B">
+                                                        <rect key="frame" x="23" y="0.0" width="39.5" height="15"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dqu-I6-5wn" firstAttribute="width" secondItem="cbT-9A-dUS" secondAttribute="width" multiplier="0.25" id="8AI-bw-jRV"/>
+                            <constraint firstItem="9hO-2S-TCg" firstAttribute="leading" secondItem="cbT-9A-dUS" secondAttribute="leading" constant="10" id="HIt-zA-zPK"/>
+                            <constraint firstAttribute="bottom" secondItem="dqu-I6-5wn" secondAttribute="bottom" id="SBW-dt-qZK"/>
+                            <constraint firstAttribute="bottom" secondItem="9hO-2S-TCg" secondAttribute="bottom" constant="10" id="Zh1-dV-RGe"/>
+                            <constraint firstAttribute="trailing" secondItem="dqu-I6-5wn" secondAttribute="trailing" constant="-6" id="mna-Zt-iYX"/>
+                            <constraint firstItem="dqu-I6-5wn" firstAttribute="top" secondItem="cbT-9A-dUS" secondAttribute="top" id="odH-TB-cDf"/>
+                            <constraint firstAttribute="height" constant="85" id="pbn-6t-xEt"/>
+                            <constraint firstItem="9hO-2S-TCg" firstAttribute="top" secondItem="cbT-9A-dUS" secondAttribute="top" constant="10" id="rkm-4s-eRe"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                <point key="value" x="0.0" y="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.64000000000000001"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="11"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="ePE-g8-FWz" firstAttribute="top" secondItem="p1n-mY-iOy" secondAttribute="top" constant="10" id="C0a-t1-d6n"/>
+                <constraint firstItem="ePE-g8-FWz" firstAttribute="trailing" secondItem="p1n-mY-iOy" secondAttribute="trailing" constant="-20" id="DMt-G7-JA3"/>
+                <constraint firstItem="cbT-9A-dUS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="35" id="FTj-Lu-tiR"/>
+                <constraint firstItem="ePE-g8-FWz" firstAttribute="leading" secondItem="p1n-mY-iOy" secondAttribute="leading" constant="20" id="JGa-bZ-Ft8"/>
+                <constraint firstAttribute="bottom" secondItem="cbT-9A-dUS" secondAttribute="bottom" constant="28" id="JKn-hX-JEo"/>
+                <constraint firstItem="p1n-mY-iOy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="23" id="YeD-Dp-7wV"/>
+                <constraint firstAttribute="trailing" secondItem="p1n-mY-iOy" secondAttribute="trailing" constant="23" id="byL-g9-1Tv"/>
+                <constraint firstAttribute="bottom" secondItem="p1n-mY-iOy" secondAttribute="bottom" constant="5" id="hpB-a2-6uM"/>
+                <constraint firstItem="ePE-g8-FWz" firstAttribute="bottom" secondItem="p1n-mY-iOy" secondAttribute="bottom" constant="-10" id="ieI-0g-q6D"/>
+                <constraint firstAttribute="trailing" secondItem="cbT-9A-dUS" secondAttribute="trailing" constant="35" id="qpb-dN-QyV"/>
+                <constraint firstItem="p1n-mY-iOy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="wFA-ZA-gOf"/>
+            </constraints>
+            <size key="customSize" width="441" height="441"/>
+            <connections>
+                <outlet property="ratingView" destination="2Ts-rB-arK" id="a19-rU-0NO"/>
+            </connections>
+            <point key="canvasLocation" x="-119.56521739130436" y="31.808035714285712"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="alarmClock" width="59" height="59"/>
+        <image name="dish" width="13" height="12"/>
+        <image name="pizzaimage" width="323" height="322"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
