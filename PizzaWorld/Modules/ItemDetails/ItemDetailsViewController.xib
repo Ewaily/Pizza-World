@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ItemDetailsViewController" customModule="PizzaWorld" customModuleProvider="target">
+            <connections>
+                <outlet property="pizzaNameLabel" destination="1UH-Ea-yMP" id="nKU-d5-xSG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="550B40291E0A0" translatesAutoresizingMaskIntoConstraints="NO" id="FvF-9Y-hT8">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="260" id="4no-2g-8va"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle3" translatesAutoresizingMaskIntoConstraints="NO" id="K4U-c9-Ogw" userLabel="FilterImage">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="260" id="Itw-wT-h8j"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tLb-MO-bXK">
+                    <rect key="frame" x="40" y="265" width="334" height="90"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Chicken Supreme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UH-Ea-yMP">
+                            <rect key="frame" x="100" y="0.0" width="134.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Cheesy mayo sauce and mozzarella, tomatoes, green pepper, onion" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HH1-aW-KcI">
+                            <rect key="frame" x="27" y="30.5" width="280" height="37.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E2I-Fc-uRx" customClass="RatingView" customModule="PizzaWorld" customModuleProvider="target">
+                            <rect key="frame" x="131" y="78" width="72" height="12"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="72" id="GTO-Ga-kYC"/>
+                                <constraint firstAttribute="height" constant="12" id="jKz-Ot-8fY"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="k5p-CV-jvk"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="tLb-MO-bXK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="CnX-Y6-NSM"/>
+                <constraint firstItem="K4U-c9-Ogw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="DCI-oY-84T"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FvF-9Y-hT8" secondAttribute="trailing" id="OSC-E8-6WG"/>
+                <constraint firstItem="K4U-c9-Ogw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fLU-VM-UNu"/>
+                <constraint firstItem="K4U-c9-Ogw" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="h6R-CM-W1l"/>
+                <constraint firstItem="tLb-MO-bXK" firstAttribute="top" secondItem="FvF-9Y-hT8" secondAttribute="bottom" constant="5" id="hwJ-G6-yVb"/>
+                <constraint firstAttribute="trailing" secondItem="tLb-MO-bXK" secondAttribute="trailing" constant="40" id="pr5-mq-9dT"/>
+                <constraint firstItem="FvF-9Y-hT8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="t7Q-U5-qXH"/>
+                <constraint firstItem="FvF-9Y-hT8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="w6M-XC-XIB"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="550B40291E0A0" width="375" height="268"/>
+        <image name="rectangle3" width="375" height="266"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -27,7 +27,6 @@ class RatingView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupUI()
-//        configureWithRating(rating: 3)
     }
     
     func setupUI(){
@@ -38,7 +37,7 @@ class RatingView: UIView {
         stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
     }
     
-    func configureWithRating(rating: Int, style: Style = .full){
+    func configureWithRating(rating: Int, style: Style = .full) { 
         switch style {
         case .full:
             // Add filled stars

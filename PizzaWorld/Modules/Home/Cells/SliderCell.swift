@@ -9,11 +9,9 @@ import UIKit
 
 class SliderCell: UICollectionViewCell {
 
-    @IBOutlet weak var ratingView: RatingView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        ratingView.configureWithRating(rating: 4)
     }
 
 }
