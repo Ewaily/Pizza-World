@@ -12,9 +12,7 @@ class HomeViewController: BaseWireFrame<HomeViewModel> {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -23,7 +21,8 @@ class HomeViewController: BaseWireFrame<HomeViewModel> {
         viewModel.viewDidLoad()
     }
 
-    override func bind(viewMode: HomeViewModel) {
+    
+    override func bind(viewModel: HomeViewModel) {
         viewModel.slideToItem.subscribe { [weak self] (index) in
             self?.collectionView.scrollToItem(at: IndexPath(row: index, section: 0), at: .centeredHorizontally, animated: true)
         }.disposed(by: disposeBag)
@@ -36,7 +35,6 @@ class HomeViewController: BaseWireFrame<HomeViewModel> {
             guard let self = self, let product = product.element  else { return }
             self.coordinator.main.navigate(to: .ItemDetails(product: product), with: .push)
         }.disposed(by: disposeBag)
-
     }
     
     private func setupUI() {
@@ -48,7 +46,7 @@ class HomeViewController: BaseWireFrame<HomeViewModel> {
         tableView.rx.setDelegate(self).disposed(by: disposeBag)
         viewModel.tableViewSlides.asObservable().bind(to: tableView.rx.items(cellIdentifier: String(describing: PopularCell.self), cellType: PopularCell.self)) { index, model, cell in
             cell.productNameLabel.text = model.title
-//            cell.ratingView.configureWithRating(rating: index, style: .compact)
+            cell.ratingView.configureWithRating(rating: index, style: .compact)
             
         }.disposed(by: disposeBag)
         
@@ -57,9 +55,6 @@ class HomeViewController: BaseWireFrame<HomeViewModel> {
             self.viewModel.didSelectItemAtIndexPath(indexPath)
         
         }.disposed(by: disposeBag)
-
-        
-
     }
     
     private func registerCell() {

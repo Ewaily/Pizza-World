@@ -1,7 +1,114 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Cart View Controller-->
+        <scene sceneID="C8x-Sj-cVq">
+            <objects>
+                <viewController storyboardIdentifier="CartViewController" id="gKB-t0-hSQ" customClass="CartViewController" customModule="PizzaWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H5Y-hn-SaR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle5" translatesAutoresizingMaskIntoConstraints="NO" id="IBk-qR-xOS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="Xjf-bX-4vb"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="l3M-bb-TVM">
+                                <rect key="frame" x="146.5" y="73" width="121" height="26.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="basket" translatesAutoresizingMaskIntoConstraints="NO" id="eqB-Yb-rQM">
+                                        <rect key="frame" x="0.0" y="5" width="15" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="Dn8-Dz-3lv"/>
+                                            <constraint firstAttribute="width" constant="15" id="X8Q-7r-GLz"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Bag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sty-jA-rzS">
+                                        <rect key="frame" x="26" y="0.0" width="95" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRH-mk-kOp">
+                                <rect key="frame" x="15" y="762" width="384" height="50"/>
+                                <color key="backgroundColor" red="0.89411764709999997" green="0.15686274510000001" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="729-c1-iYy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="PLACE ORDER">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                        <point key="value" x="0.0" y="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="placeOlderButtonClicked:" destination="gKB-t0-hSQ" eventType="touchUpInside" id="aqr-1w-2jt"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bwf-zA-CZF">
+                                <rect key="frame" x="18" y="136.5" width="378" height="615.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PVS-uh-tm3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PVS-uh-tm3" firstAttribute="trailing" secondItem="gRH-mk-kOp" secondAttribute="trailing" constant="15" id="1dy-Td-5LQ"/>
+                            <constraint firstItem="gRH-mk-kOp" firstAttribute="top" secondItem="bwf-zA-CZF" secondAttribute="bottom" constant="10" id="ABE-bf-Sp9"/>
+                            <constraint firstItem="bwf-zA-CZF" firstAttribute="leading" secondItem="PVS-uh-tm3" secondAttribute="leading" constant="18" id="DrK-aV-ipf"/>
+                            <constraint firstItem="IBk-qR-xOS" firstAttribute="leading" secondItem="PVS-uh-tm3" secondAttribute="leading" id="HO5-17-cM8"/>
+                            <constraint firstItem="PVS-uh-tm3" firstAttribute="trailing" secondItem="bwf-zA-CZF" secondAttribute="trailing" constant="18" id="Ven-dN-pZd"/>
+                            <constraint firstItem="gRH-mk-kOp" firstAttribute="leading" secondItem="PVS-uh-tm3" secondAttribute="leading" constant="15" id="bHg-ea-eNZ"/>
+                            <constraint firstItem="l3M-bb-TVM" firstAttribute="top" secondItem="PVS-uh-tm3" secondAttribute="top" constant="29" id="cC0-O6-xpw"/>
+                            <constraint firstItem="PVS-uh-tm3" firstAttribute="bottom" secondItem="gRH-mk-kOp" secondAttribute="bottom" constant="50" id="cZb-xL-THQ"/>
+                            <constraint firstItem="IBk-qR-xOS" firstAttribute="top" secondItem="H5Y-hn-SaR" secondAttribute="top" id="d0P-iY-F6g"/>
+                            <constraint firstItem="l3M-bb-TVM" firstAttribute="centerX" secondItem="H5Y-hn-SaR" secondAttribute="centerX" id="jiL-kz-O4s"/>
+                            <constraint firstItem="PVS-uh-tm3" firstAttribute="trailing" secondItem="IBk-qR-xOS" secondAttribute="trailing" id="lhr-su-vKy"/>
+                            <constraint firstItem="bwf-zA-CZF" firstAttribute="top" secondItem="l3M-bb-TVM" secondAttribute="bottom" constant="37" id="we8-y5-DxJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="placeOlderButton" destination="gRH-mk-kOp" id="nEy-Ud-J8r"/>
+                        <outlet property="tableView" destination="bwf-zA-CZF" id="hos-rl-3Ab"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YVV-fi-AEi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="411.59420289855075" y="194.86607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="basket" width="15" height="17"/>
+        <image name="rectangle5" width="375" height="220"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

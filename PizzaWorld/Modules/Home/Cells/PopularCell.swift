@@ -15,6 +15,9 @@ class PopularCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        ratingView.configureWithRating(rating: 3, style: .compact)
+    }
+    
+    override func prepareForReuse() {
+        ratingView.stackView.removeAllArrangedSubviews()
     }
 }

@@ -70,7 +70,7 @@ class CustomTabBarController: UITabBarController {
             view.tabBarItem = tabBarItem(for: item)
             return view
         case .Cart:
-            let view = coordinator.main.viewController(for: .Home, coordinator: coordinator)
+            let view = coordinator.cart.viewController(for: .Cart, coordinator: coordinator)
             view.tabBarItem = tabBarItem(for: item)
             return view
         }

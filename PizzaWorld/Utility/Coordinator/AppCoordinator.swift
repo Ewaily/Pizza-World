@@ -10,12 +10,17 @@ import UIKit
 
 protocol Coordinator {
     var main: MainNavigator { get }
+    var cart: CartNavigator { get }
     var navigationController: UINavigationController? { get }
 }
 
 class AppCoordinator: Coordinator {
     let window: UIWindow
     lazy var main: MainNavigator = {
+        return .init(coordinator: self)
+    }()
+    
+    lazy var cart: CartNavigator = {
         return .init(coordinator: self)
     }()
     

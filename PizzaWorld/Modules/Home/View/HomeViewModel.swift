@@ -21,20 +21,17 @@ protocol HomeViewModelInput {
     func didSelectItemAtIndexPath(_ indexPath: IndexPath)
 }
 
-class HomeViewModel: ViewModel, HomeViewModelInput, HomeViewModelOutput{
-    
-    
-    
+class HomeViewModel: ViewModel, HomeViewModelInput, HomeViewModelOutput {
     
     private var sliderTimer: Timer?
 //    private var slides = [1,2,3,4]
     var slides: BehaviorRelay<[Int]> = .init(value: [1])
     var tableViewSlides: BehaviorRelay<[Product]> = .init(value: [
-        Product(title: "Product 1"),
-        Product(title: "Product 2"),
-        Product(title: "Product 3"),
-        Product(title: "Product 4"),
-        Product(title: "Product 5")
+        Product(title: "Product 1", rating: 3, price: 33),
+        Product(title: "Product 2", rating: 4, price: 23),
+        Product(title: "Product 3", rating: 2, price: 22),
+        Product(title: "Product 4", rating: 5, price: 32),
+        Product(title: "Product 5", rating: 1, price: 76)
     ])
     
     private var currentSlide = 0

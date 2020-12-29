@@ -7,14 +7,20 @@
 
 import UIKit
 
-class PizzaTextView: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+class PizzaTextView: NibLoadingView {
+    @IBOutlet weak var textView: UITextView!
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
     }
-    */
 
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
+    func setup() {
+        
+    }
 }

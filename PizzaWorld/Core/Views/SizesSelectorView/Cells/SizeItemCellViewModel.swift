@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct SizeItemCellViewModel {
+    var topStrings: String
+    
+    init(size: Size, showPrice: Bool) {
+        self.topStrings = size.name
+    }
+}
